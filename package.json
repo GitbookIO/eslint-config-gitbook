@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-gitbook",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "author": "GitBook <contact@gitbook.com>",
+  "homepage": "https://github.com/GitbookIO/eslint-config-gitbook",
+  "description": "GitBook's ESLint config, following our styleguide",
+  "bugs": "https://github.com/GitbookIO/eslint-config-gitbook/issues",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "eslint-plugin-react": "^4.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1"
+  },
+  "scripts": {
+    "test": "eslint -c ./index.js ./spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GitbookIO/eslint-config-gitbook.git"
+  }
+}
