@@ -46,17 +46,73 @@ module.exports = {
         // Require space between comment and content
         'spaced-comment': [ ERROR, 'always' ],
 
-        // Require spaces between operators
-        'space-infix-ops': [ ERROR ],
+        // Spacing
+        'block-spacing':                 ERROR,
+        'space-before-blocks':           ERROR,
+        'space-before-function-paren':   [ERROR, 'never'],
+        'space-infix-ops':               ERROR,
+        'space-unary-ops':               ERROR,
+        'template-curly-spacing':        [ERROR, 'never'],
+        'no-whitespace-before-property': ERROR,
+        'no-spaced-func':                ERROR,
+        'no-multi-spaces':               ERROR,
+        'no-mixed-spaces-and-tabs':      ERROR,
+        'no-multiple-empty-lines':       [ ERROR, { 'max': 2, 'maxEOF': 1 }],
+        'key-spacing':                   [ ERROR, {
+            'beforeColon': false,
+            'afterColon': true
+        } ],
+        'lines-around-comment': [ WARNING, {
+            'beforeBlockComment': true,
+            'afterBlockComment': false
+        } ],
+
+        // Require presence of radix in parseInt
+        'radix': ERROR,
+
+        // JS Weird syntax
+        'no-with':                    ERROR,
+        'no-void':                    ERROR,
+        'no-throw-literal':           ERROR,
+        'no-shadow-restricted-names': ERROR,
+        'no-shadow':                  WARNING,
+        'no-sequences':               ERROR,
+        'no-redeclare':               ERROR,
+        'no-new-symbol':              ERROR,
+        'no-new-object':              ERROR,
+        'no-negated-in-lhs':          ERROR,
+        'no-native-reassign':         WARNING,
+        'new-parens':                 ERROR,
+        'no-array-constructor':       ERROR,
+        'no-dupe-args':               ERROR,
+        'comma-dangle':               [ ERROR, 'never' ],
+        'comma-style':                [ ERROR, 'last' ],
+        'computed-property-spacing':  [ ERROR, 'never' ],
+        'dot-location':               [ ERROR, 'property' ],
+
+        // functions
+        'no-func-assign': WARNING,
+
+        // Regexp
+        'no-regex-spaces': WARNING,
+        'no-invalid-regexp': WARNING,
 
         // ES6
         // Use const and let instead of var
-        'no-var':               ERROR,
-        'no-void':              ERROR,
-        'prefer-spread':        ERROR,
-        'no-useless-call':      ERROR,
-        'no-use-before-define': [ WARNING, { 'functions': false } ],
-        'prefer-const':         [ ERROR, { 'destructuring': 'all' } ],
+        'import/export':           ERROR,
+        'no-var':                  ERROR,
+        'prefer-spread':           ERROR,
+        'prefer-template':         WARNING,
+        'prefer-rest-params':      WARNING,
+        'no-useless-call':         ERROR,
+        'no-use-before-define':    [ WARNING, { 'functions': false } ],
+        'prefer-const':            [ ERROR, { 'destructuring': 'all' } ],
+        'no-useless-computed-key': WARNING,
+        'no-useless-constructor':  WARNING,
+        'no-unused-expressions':   WARNING,
+        'no-unreachable':          ERROR,
+        'no-undef':                ERROR,
+        'constructor-super':       ERROR,
 
         // React configuration
         'react/jsx-uses-vars':            ERROR,
