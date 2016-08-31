@@ -20,6 +20,9 @@ module.exports = {
         // File should end with a new line
         'eol-last': ERROR,
 
+        // No extra whitespaces at the end of lines
+        'no-trailing-spaces': ERROR,
+
         // Use single quotes
         'quotes': [ ERROR, 'single' ],
 
