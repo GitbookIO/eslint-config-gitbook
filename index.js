@@ -1,6 +1,6 @@
 
 const OFF = 0;
-// const WARNING = 1;
+const WARNING = 1;
 const ERROR = 2;
 
 module.exports = {
@@ -50,7 +50,7 @@ module.exports = {
         'no-void':              ERROR,
         'prefer-spread':        ERROR,
         'no-useless-call':      ERROR,
-        'no-use-before-define': [ ERROR, { 'functions': false } ],
+        'no-use-before-define': [ WARNING, { 'functions': false } ],
         'prefer-const':         [ ERROR, { 'destructuring': 'all' } ],
 
         // React configuration
