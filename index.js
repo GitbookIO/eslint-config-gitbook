@@ -55,7 +55,14 @@ module.exports = {
         'template-curly-spacing':        [ERROR, 'never'],
         'no-whitespace-before-property': ERROR,
         'no-spaced-func':                ERROR,
-        'no-multi-spaces':               ERROR,
+        // Avoid multi-spaces except for imports, properties
+        'no-multi-spaces':               [ ERROR, {
+            'exceptions': {
+                'ImportDeclaration':  true,
+                'Property':           true,
+                'VariableDeclarator': true
+            }
+        } ],
         'no-mixed-spaces-and-tabs':      ERROR,
         'no-multiple-empty-lines':       [ ERROR, { 'max': 2, 'maxEOF': 1 }],
         'key-spacing':                   [ ERROR, {
