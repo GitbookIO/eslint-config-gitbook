@@ -42,7 +42,12 @@ module.exports = {
         } ],
 
         'no-extra-boolean-cast': [ OFF ],
+
+        // Require space between comment and content
         'spaced-comment': [ ERROR, 'always' ],
+
+        // Require spaces between operators
+        'space-infix-ops': [ ERROR ],
 
         // ES6
         // Use const and let instead of var
