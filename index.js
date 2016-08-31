@@ -58,9 +58,10 @@ module.exports = {
         // Avoid multi-spaces except for imports, properties
         'no-multi-spaces':               [ ERROR, {
             'exceptions': {
-                'ImportDeclaration':  true,
-                'Property':           true,
-                'VariableDeclarator': true
+                'ImportDeclaration':    true,
+                'Property':             true,
+                'VariableDeclarator':   true,
+                'AssignmentExpression': true
             }
         } ],
         'no-mixed-spaces-and-tabs':      ERROR,
@@ -109,7 +110,7 @@ module.exports = {
         // Use const and let instead of var
         'no-var':                  ERROR,
         'prefer-spread':           ERROR,
-        'prefer-template':         WARNING,
+        'prefer-template':         OFF,
         'prefer-rest-params':      WARNING,
         'no-useless-call':         ERROR,
         'no-use-before-define':    [ WARNING, { 'functions': false } ],
