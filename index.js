@@ -60,7 +60,8 @@ module.exports = {
         'no-multiple-empty-lines':       [ ERROR, { 'max': 2, 'maxEOF': 1 }],
         'key-spacing':                   [ ERROR, {
             'beforeColon': false,
-            'afterColon': true
+            'afterColon': true,
+            'mode': 'minimum'
         } ],
         'lines-around-comment': [ WARNING, {
             'beforeBlockComment': true,
@@ -99,7 +100,6 @@ module.exports = {
 
         // ES6
         // Use const and let instead of var
-        'import/export':           ERROR,
         'no-var':                  ERROR,
         'prefer-spread':           ERROR,
         'prefer-template':         WARNING,
