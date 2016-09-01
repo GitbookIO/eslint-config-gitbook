@@ -2,5 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+### 1.2.0
+- Enforce spaces before and after keywords (`keyword-spacing`)
+- Disallow spaces in parentheses (`space-in-parens`)
+
 ### 1.1.2
 - Fix `no-multi-spaces` throwing errors for assignment
