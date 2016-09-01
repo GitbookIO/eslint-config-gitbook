@@ -77,7 +77,7 @@ module.exports = {
         } ],
 
         // Require presence of radix in parseInt
-        'radix': ERROR,
+        'radix': WARNING,
 
         // JS Weird syntax
         'no-with':                    ERROR,
