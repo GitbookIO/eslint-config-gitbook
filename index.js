@@ -48,6 +48,8 @@ module.exports = {
 
         // Spacing
         'block-spacing':                 ERROR,
+        'keyword-spacing':               [ ERROR, { 'after': true, 'before': true } ],
+        'space-in-parens':               [ ERROR, 'never' ],
         'space-before-blocks':           ERROR,
         'space-before-function-paren':   [ERROR, 'never'],
         'space-infix-ops':               ERROR,
