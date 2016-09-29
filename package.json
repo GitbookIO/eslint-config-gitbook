@@ -11,7 +11,7 @@
     "eslint-plugin-react": "^6.3.0"
   },
   "devDependencies": {
-    "eslint": "^2.11.1"
+    "eslint": "^3.7.1"
   },
   "scripts": {
     "test": "eslint -c ./index.js ./spec"
