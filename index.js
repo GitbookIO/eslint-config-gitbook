@@ -130,6 +130,7 @@ module.exports = {
         'react/jsx-uses-react':           ERROR,
         'react/jsx-no-undef':             ERROR,
         'react/jsx-no-duplicate-props':   ERROR,
+        'react/jsx-wrap-multilines':      ERROR,
         'react/no-deprecated':            ERROR,
         'react/no-did-mount-set-state':   ERROR,
         'react/no-did-update-set-state':  ERROR,
