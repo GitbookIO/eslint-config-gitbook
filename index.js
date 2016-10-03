@@ -82,6 +82,7 @@ module.exports = {
         'radix': WARNING,
 
         // JS Weird syntax
+        'no-case-declarations':       OFF,
         'no-with':                    ERROR,
         'no-void':                    ERROR,
         'no-throw-literal':           ERROR,
