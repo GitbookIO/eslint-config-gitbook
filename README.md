@@ -20,3 +20,11 @@ Add to your `.eslintrc`:
     "extends": "gitbook"
 }
 ```
+
+For GitBook Plugins, use:
+
+```js
+{
+    "extends": "gitbook/plugin"
+}
+```
