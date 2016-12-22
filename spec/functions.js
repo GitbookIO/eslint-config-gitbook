@@ -5,7 +5,7 @@ function sayHello(msg) {
 }
 
 // Anonymous function
-const direBonjour = function(msg) {
+const direBonjour = (msg) => {
     return 'Bonjour ' + msg;
 };
 

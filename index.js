@@ -35,6 +35,11 @@ module.exports = {
         // Always end lines with semi-colons
         'semi': [ ERROR, 'always' ],
 
+        // Functions
+        'func-style': [ WARNING, 'declaration', { 'allowArrowFunctions': true } ],
+        // We prefer arrow function for anonymous callbacks
+        'prefer-arrow-callback': [ ERROR, { 'allowNamedFunctions': true } ],
+
         // Dont accept unused variables
         'no-unused-vars': [ ERROR, {
             'vars': 'all',
@@ -125,7 +130,7 @@ module.exports = {
         'no-undef':                ERROR,
         'constructor-super':       ERROR,
         // Allows omitting parens when there is only one argument
-        'arrow-parens':            [ ERROR, 'as-needed'],
+        'arrow-parens':            [ ERROR, 'as-needed', { 'requireForBlockBody': true } ],
 
         // React configuration
         'react/jsx-uses-vars':            ERROR,
