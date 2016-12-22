@@ -124,6 +124,8 @@ module.exports = {
         'no-unreachable':          ERROR,
         'no-undef':                ERROR,
         'constructor-super':       ERROR,
+        // Allows omitting parens when there is only one argument
+        'arrow-parens':            [ ERROR, 'as-needed'],
 
         // React configuration
         'react/jsx-uses-vars':            ERROR,
