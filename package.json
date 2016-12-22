@@ -7,6 +7,9 @@
   "description": "GitBook's ESLint config, following our styleguide",
   "bugs": "https://github.com/GitbookIO/eslint-config-gitbook/issues",
   "license": "Apache-2.0",
+  "peerDependencies": {
+      "eslint": "^3.7.1"
+  },
   "dependencies": {
     "eslint-plugin-react": "^6.3.0"
   },
