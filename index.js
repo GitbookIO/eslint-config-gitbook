@@ -1,166 +1,81 @@
-
 const OFF = 0;
 const WARNING = 1;
 const ERROR = 2;
 
 module.exports = {
-    'extends': 'eslint:recommended',
-    'env': {
-        'node':    true,
-        'browser': true,
-        'es6':     true
-    },
-    'plugins': [
-        'react'
-    ],
+    'extends': 'airbnb',
     'rules': {
-        // Use indentation of 4 spaces
-        'indent': [ ERROR, 4 ],
-
-        // File should end with a new line
-        'eol-last': ERROR,
-
-        // No extra whitespaces at the end of lines
-        'no-trailing-spaces': ERROR,
-
-        // Use single quotes
-        'quotes': [ ERROR, 'single' ],
-
-        // Use unix line break (\n and not \r\n)
-        'linebreak-style': [ ERROR, 'unix' ],
-
-        // Require object shorthand (see spec/object-shorthand.js)
-        'object-shorthand': [ ERROR, 'always' ],
-
-        // Always end lines with semi-colons
-        'semi': [ ERROR, 'always' ],
-
-        // Functions
-        'func-style': [ WARNING, 'declaration', { 'allowArrowFunctions': true } ],
-        // We prefer arrow function for anonymous callbacks
-        'prefer-arrow-callback': [ ERROR, { 'allowNamedFunctions': true } ],
-
-        // Dont accept unused variables
-        'no-unused-vars': [ ERROR, {
-            'vars': 'all',
-            'args': 'none'
-        } ],
-
-        'no-extra-boolean-cast': [ OFF ],
-
-        // Require space between comment and content
-        'spaced-comment': [ ERROR, 'always' ],
-
-        // Spacing
-        'block-spacing':                 ERROR,
-        'keyword-spacing':               [ ERROR, { 'after': true, 'before': true } ],
-        'space-in-parens':               [ ERROR, 'never' ],
-        'space-before-blocks':           ERROR,
-        'space-before-function-paren':   [ERROR, 'never'],
-        'space-infix-ops':               ERROR,
-        'space-unary-ops':               ERROR,
-        'template-curly-spacing':        [ERROR, 'never'],
-        'no-whitespace-before-property': ERROR,
-        'no-spaced-func':                ERROR,
-        // Avoid multi-spaces except for imports, properties
-        'no-multi-spaces':               [ ERROR, {
+        // Base
+        'indent': [ERROR, 4],
+        'func-style': [WARNING, 'declaration', {
+            'allowArrowFunctions': true
+        }],
+        'prefer-arrow-callback': [ERROR, {
+            'allowNamedFunctions': true
+        }],
+        'no-extra-boolean-cast': [OFF],
+        'no-multi-spaces': [ERROR, {
             'exceptions': {
-                'ImportDeclaration':    true,
-                'Property':             true,
-                'VariableDeclarator':   true,
+                'ImportDeclaration': true,
+                'Property': true,
+                'VariableDeclarator': true,
                 'AssignmentExpression': true
             }
-        } ],
-        'no-mixed-spaces-and-tabs':      ERROR,
-        'no-multiple-empty-lines':       [ ERROR, { 'max': 2, 'maxEOF': 1 }],
-        'key-spacing':                   [ ERROR, {
-            'beforeColon': false,
-            'afterColon': true,
-            'mode': 'minimum'
-        } ],
-        'lines-around-comment': [ WARNING, {
+        }],
+        'lines-around-comment': [WARNING, {
             'beforeBlockComment': true,
             'afterBlockComment': false
-        } ],
-
-        // Require presence of radix in parseInt
+        }],
         'radix': WARNING,
-
-        // JS Weird syntax
-        'no-case-declarations':       OFF,
-        'no-with':                    ERROR,
-        'no-void':                    ERROR,
-        'no-throw-literal':           ERROR,
-        'no-shadow-restricted-names': ERROR,
-        'no-shadow':                  WARNING,
-        'no-sequences':               ERROR,
-        'no-redeclare':               ERROR,
-        'no-new-symbol':              ERROR,
-        'no-new-object':              ERROR,
-        'no-negated-in-lhs':          ERROR,
-        'no-native-reassign':         WARNING,
-        'new-parens':                 ERROR,
-        'no-array-constructor':       ERROR,
-        'no-dupe-args':               ERROR,
-        'comma-dangle':               [ ERROR, 'never' ],
-        'comma-style':                [ ERROR, 'last' ],
-        'computed-property-spacing':  [ ERROR, 'never' ],
-        'dot-location':               [ ERROR, 'property' ],
-
-        // functions
+        'no-case-declarations': OFF,
+        'no-with': ERROR,
+        'no-shadow': WARNING,
+        'no-negated-in-lhs': ERROR,
+        'no-native-reassign': WARNING,
+        'comma-dangle': [ERROR, 'never'],
         'no-func-assign': WARNING,
-
-        // Regexp
         'no-regex-spaces': WARNING,
         'no-invalid-regexp': WARNING,
+        'key-spacing': [WARNING, { mode: 'minimum' }],
 
         // ES6
-        // Use const and let instead of var
-        'no-var':                  ERROR,
-        'prefer-spread':           ERROR,
-        'prefer-template':         OFF,
-        'prefer-rest-params':      WARNING,
-        'no-useless-call':         ERROR,
-        'no-use-before-define':    [ WARNING, { 'functions': false } ],
-        'prefer-const':            [ ERROR, { 'destructuring': 'all' } ],
+        'prefer-template': OFF,
+        'prefer-rest-params': WARNING,
+        'no-useless-call': ERROR,
+        'no-use-before-define': [WARNING, { 'functions': false }],
         'no-useless-computed-key': WARNING,
-        'no-useless-constructor':  WARNING,
-        'no-unused-expressions':   WARNING,
-        'no-unreachable':          ERROR,
-        'no-undef':                ERROR,
-        'constructor-super':       ERROR,
-        // Allows omitting parens when there is only one argument
-        'arrow-parens':            [ ERROR, 'as-needed', { 'requireForBlockBody': true } ],
+        'no-useless-constructor': WARNING,
+        'no-unused-expressions': WARNING,
+        'import/no-extraneous-dependencies': [ERROR, {
+            devDependencies: [
+                'test/**', // tape, common npm pattern
+                'tests/**', // also common npm pattern
+                'spec/**', // mocha, rspec-like pattern
+                '**/__tests__/**', // jest pattern
+                'test.{js,jsx}', // repos with a single test file
+                'test-*.{js,jsx}', // repos with multiple top-level test files
+                '**/*.{test,spec}.{js,jsx}', // tests where the extension denotes that it is a test
+                '**/webpack.config.js', // webpack config
+                '**/webpack.config.*.js', // webpack config
+                '**/rollup.config.js', // rollup config
+                '**/rollup.config.*.js', // rollup config
+                '**/gulpfile.js', // gulp config
+                '**/gulpfile.*.js', // gulp config
+                '**/Gruntfile', // grunt config
+                '**/scripts/**' // scripts
+            ],
+            optionalDependencies: false
+        }],
 
-        // React configuration
-        'react/jsx-uses-vars':            ERROR,
-        'react/jsx-uses-react':           ERROR,
-        'react/jsx-no-undef':             ERROR,
-        'react/jsx-no-duplicate-props':   ERROR,
-        'react/jsx-wrap-multilines':      [ ERROR, { declaration: false, assignment: false, return: true } ],
-        'react/no-deprecated':            ERROR,
-        'react/no-did-mount-set-state':   ERROR,
-        'react/no-did-update-set-state':  ERROR,
-        'react/no-direct-mutation-state': ERROR,
-        'react/no-is-mounted':            ERROR,
-        'react/no-unknown-property':      ERROR,
-        'react/prop-types':               ERROR,
-        'react/react-in-jsx-scope':       ERROR,
-
-        // Specify whether double or single quotes should be used in JSX attributes
-        // http://eslint.org/docs/rules/jsx-quotes
-        'jsx-quotes': [ ERROR, 'prefer-double' ],
-
-        // Disallow yodo condition
-        // http://eslint.org/docs/rules/yoda
-        'yoda': [ ERROR, 'never' ]
-    },
-    'parserOptions': {
-        'ecmaVersion': 5,
-        'sourceType': 'module',
-        'ecmaFeatures': {
-            'jsx': true,
-            'experimentalObjectRestSpread': true
-        }
+        // React
+        'react/jsx-indent': [ERROR, 4],
+        'react/jsx-indent-props': [ERROR, 4],
+        'react/jsx-filename-extension': OFF,
+        'react/jsx-wrap-multilines': [ERROR, {
+            declaration: false,
+            assignment: false,
+            return: true
+        }],
+        'react/no-direct-mutation-state': ERROR
     }
 };
