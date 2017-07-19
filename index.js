@@ -7,9 +7,6 @@ module.exports = {
         'prettier/react'
     ],
     plugins: ['flowtype', 'prettier'],
-    env: {
-        browser: true
-    },
     rules: {
         eqeqeq: ['off'],
         'no-bitwise': ['off'],
