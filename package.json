@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gitbook",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "./index.js",
   "author": "GitBook <contact@gitbook.com>",
   "homepage": "https://github.com/GitbookIO/eslint-config-gitbook",
