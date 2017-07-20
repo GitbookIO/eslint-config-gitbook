@@ -25,7 +25,6 @@ module.exports = {
             'error',
             {
                 singleQuote: true,
-                parser: 'flow',
                 tabWidth: 4
             }
         ],
