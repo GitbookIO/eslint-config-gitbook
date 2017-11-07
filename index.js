@@ -139,6 +139,21 @@ module.exports = {
         'react/no-unknown-property':      ERROR,
         'react/prop-types':               ERROR,
         'react/react-in-jsx-scope':       ERROR,
+        'react/sort-comp': [ERROR, {
+            order: [
+                'static-methods',
+                'lifecycle',
+                'everything-else',
+                'rendering'
+            ],
+            groups: {
+                rendering: [
+                    // Accepts rendering methods before render
+                    '/^render.+$/',
+                    'render'
+                ]
+            }
+        }],
 
         // Specify whether double or single quotes should be used in JSX attributes
         // http://eslint.org/docs/rules/jsx-quotes
