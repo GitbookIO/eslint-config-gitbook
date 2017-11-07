@@ -41,8 +41,15 @@ module.exports = {
                     'lifecycle',
                     'everything-else',
                     '/^on.+$/',
-                    'render'
-                ]
+                    'rendering'
+                ],
+                groups: {
+                    rendering: [
+                        // Accepts rendering methods before render
+                        '/^render.+$/',
+                        'render'
+                    ]
+                }
             }
         ],
         'react/no-multi-comp': ['off']
