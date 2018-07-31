@@ -8,7 +8,13 @@ This package provides GitBook's .eslintrc as an extensible shared config. It is 
 ### Installation
 
 ```
-$ npm install eslint-config-gitbook --save-dev
+npm install eslint-config-gitbook --save-dev
+```
+
+With npm 5+, you can now install the package along with its peer dependencies easily:
+
+```
+npx install-peerdeps --dev eslint-config-gitbook
 ```
 
 ### Usage
