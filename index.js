@@ -10,8 +10,6 @@ module.exports = {
     rules: {
         eqeqeq: ['off'],
         'no-bitwise': ['off'],
-        'class-methods-use-this': ['off'],
-        'import/prefer-default-export': ['off'],
         'arrow-body-style': ['error', 'as-needed'],
         'no-use-before-define': ['error', { functions: false }],
         'no-param-reassign': ['error', { props: false }],
@@ -26,6 +24,37 @@ module.exports = {
             {
                 singleQuote: true,
                 tabWidth: 4
+            }
+        ],
+        'prefer-destructuring': ['warn'],
+        'prefer-arrow-callback': [
+            'error',
+            {
+                allowNamedFunctions: true
+            }
+        ],
+
+        // Classes
+        'class-methods-use-this': ['off'],
+        'lines-between-class-members': [
+            'error',
+            'always',
+            {
+                exceptAfterSingleLine: true
+            }
+        ],
+
+        // Imports
+        'import/prefer-default-export': ['off'],
+
+        // React
+        'react/no-array-index-key': ['warn'],
+        'react/jsx-no-bind': ['off'],
+        'react/no-unescaped-entities': ['warn'],
+        'react/default-props-match-prop-types': [
+            'error',
+            {
+                allowRequiredDefaults: true
             }
         ],
         'react/prefer-stateless-function': ['warn'],
@@ -45,6 +74,7 @@ module.exports = {
                 ]
             }
         ],
-        'react/no-multi-comp': ['off']
+        'react/no-multi-comp': ['off'],
+        'react/destructuring-assignment': ['warn', 'always']
     }
 };
