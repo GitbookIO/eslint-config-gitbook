@@ -28,7 +28,7 @@ module.exports = {
                 tabWidth: 4
             }
         ],
-        'react/prefer-stateless-function': ['off'],
+        'react/prefer-stateless-function': ['warn'],
         'react/jsx-filename-extension': ['off'],
         'react/sort-comp': [
             'error',
